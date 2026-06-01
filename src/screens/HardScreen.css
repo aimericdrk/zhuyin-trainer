@@ -1,0 +1,110 @@
+.hd-wrap {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg);
+}
+
+.hd-main {
+  flex: 1;
+  padding: 16px;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.hd-prompt {
+  display: flex;
+  justify-content: center;
+}
+
+.hd-options {
+  width: 100%;
+}
+
+.hd-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  padding: 8px 0 24px;
+  flex-wrap: wrap;
+}
+
+.hd-btn {
+  padding: 10px 18px;
+  min-height: 44px;
+  border-radius: var(--radius-key);
+  font-weight: 500;
+  font-family: var(--font-ui);
+  transition: background 120ms ease, color 120ms ease, transform 80ms ease;
+  cursor: pointer;
+}
+
+.hd-btn:active:not(:disabled) { transform: translateY(1px); }
+.hd-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.hd-btn--secondary {
+  background: var(--surface);
+  color: var(--ink);
+  border: 1px solid var(--rule);
+}
+.hd-btn--secondary:hover:not(:disabled) {
+  background: var(--bg);
+  border-color: var(--accent);
+}
+
+.hd-btn--accent {
+  background: var(--accent);
+  color: var(--surface);
+  border: 1px solid var(--accent);
+}
+.hd-btn--accent:hover:not(:disabled) {
+  background: color-mix(in srgb, var(--accent) 80%, var(--ink));
+}
+
+.hd-btn--continue {
+  padding: 12px 28px;
+  min-height: 48px;
+  background: var(--ok);
+  color: var(--surface);
+  border: 1px solid var(--ok);
+  font-weight: 600;
+  font-size: 16px;
+}
+.hd-btn--continue:hover:not(:disabled) {
+  background: color-mix(in srgb, var(--ok) 80%, var(--ink));
+}
+
+.hd-empty {
+  text-align: center;
+  color: var(--ink-soft);
+  font-family: var(--font-ui);
+}
+
+.hd-order-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 16px;
+  text-align: center;
+}
+
+.hd-order-label {
+  font-family: var(--font-ui);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.hd-order-target {
+  font-family: var(--font-py);
+  font-size: clamp(20px, 4vw, 28px);
+  font-style: italic;
+  color: var(--ink);
+}

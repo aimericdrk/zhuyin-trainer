@@ -1,0 +1,41 @@
+{
+  "home": {
+    "title": "Entraîneur de Zhuyin",
+    "easy": "Facile",
+    "easyDesc": "Tape le zhuyin et le ton pour un caractère chinois",
+    "hard": "Difficile",
+    "hardDesc": "Choisis le sens d'un mot chinois"
+  },
+  "trainer": {
+    "skip": "Passer",
+    "solution": "Voir la solution",
+    "continue": "Continuer",
+    "backspace": "Effacer",
+    "meaning": "Sens",
+    "example": "Exemple",
+    "translation": "Traduction",
+    "back": "Accueil",
+    "easyTitle": "Facile",
+    "hardTitle": "Difficile",
+    "playCharacter": "Lire le caractère",
+    "playSentence": "Lire la phrase",
+    "playWord": "Lire {word}",
+    "audioUnsupported": "Audio non disponible dans ce navigateur",
+    "shuffleKeyboard": "Mélanger les touches",
+    "showCount": "Afficher le nombre de zhuyin",
+    "nativeInput": "Utiliser le clavier du téléphone",
+    "nativeInputPlaceholder": "Tapez le zhuyin…",
+    "phoneLayout": "Disposition du clavier du téléphone",
+    "speechRate": "Vitesse de la voix",
+    "arrangeSentence": "Arrange pour dire :"
+  },
+  "stats": {
+    "correct": "Justes",
+    "wrong": "Erreurs",
+    "skipped": "Passés"
+  },
+  "topbar": {
+    "theme": "Changer de thème",
+    "language": "Langue"
+  }
+}

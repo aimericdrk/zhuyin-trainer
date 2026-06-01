@@ -1,0 +1,36 @@
+{
+  "name": "Zhuyin Trainer · Learn Bopomofo with Pinyin and Tones",
+  "short_name": "Zhuyin Trainer",
+  "description": "Interactive Zhuyin (Bopomofo) trainer. Practice pinyin → zhuyin or full zhuyin + tone with real Chinese characters. Bilingual EN/FR, light and dark mode.",
+  "lang": "en",
+  "categories": [
+    "education",
+    "languages",
+    "productivity"
+  ],
+  "icons": [
+    {
+      "src": "icon.png",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "icon.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "theme_color": "#f5efe4",
+  "background_color": "#f5efe4"
+}

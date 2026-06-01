@@ -1,0 +1,55 @@
+.is-strip {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  margin: 16px 0;
+}
+
+.is-slot {
+  min-width: 56px;
+  min-height: 64px;
+  padding: 8px 12px;
+  border-radius: var(--radius-key);
+  background: var(--surface);
+  color: var(--ink);
+  border: 2px solid var(--rule);
+  font-family: var(--font-cn);
+  font-size: clamp(28px, 4.5vw, 40px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 150ms ease, border-color 150ms ease, color 150ms ease;
+}
+
+.is-placeholder {
+  color: var(--ink-soft);
+  opacity: 0.5;
+}
+
+.is-slot--ok {
+  background: color-mix(in srgb, var(--ok) 15%, var(--surface));
+  border-color: var(--ok);
+  color: var(--ok);
+}
+
+.is-slot--bad {
+  background: color-mix(in srgb, var(--bad) 15%, var(--surface));
+  border-color: var(--bad);
+  color: var(--bad);
+}
+
+.is-slot--wrong-flash {
+  border-color: var(--bad);
+  animation: is-shake 300ms ease;
+}
+
+@keyframes is-shake {
+  0%, 100% { transform: translateX(0); }
+  25%      { transform: translateX(-4px); }
+  75%      { transform: translateX(4px); }
+}
+
+.is-slot--group-end {
+  margin-right: 24px;
+}

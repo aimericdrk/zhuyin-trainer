@@ -1,0 +1,19 @@
+.ss-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ss-range {
+  width: 120px;
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+
+.ss-value {
+  font-family: var(--font-ui);
+  font-size: 13px;
+  color: var(--ink-soft);
+  min-width: 44px;
+  text-align: right;
+}

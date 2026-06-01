@@ -1,0 +1,32 @@
+:root,
+[data-theme="light"] {
+  --bg:          #f5efe4;
+  --surface:     #fdfaf2;
+  --ink:         #1f1a14;
+  --ink-soft:    #5b5246;
+  --accent:      #b8473b;
+  --accent-soft: #e8c9a0;
+  --ok:          #3f7d4b;
+  --bad:         #a83232;
+  --rule:        rgba(42, 34, 26, 0.08);
+
+  --radius-card: 14px;
+  --radius-key:  10px;
+  --shadow-card: 0 1px 0 var(--rule), 0 12px 30px -20px rgba(0,0,0,.25);
+
+  --font-cn:    'Noto Serif TC', 'Songti TC', 'PingFang TC', serif;
+  --font-py:    'Source Serif 4', 'Source Serif Pro', Georgia, serif;
+  --font-ui:    'Inter', system-ui, -apple-system, sans-serif;
+}
+
+[data-theme="dark"] {
+  --bg:          #15181c;
+  --surface:     #1d2128;
+  --ink:         #ede4d1;
+  --ink-soft:    #9a9385;
+  --accent:      #d97a4e;
+  --accent-soft: #3d2a1f;
+  --ok:          #7ec88f;
+  --bad:         #e08585;
+  --rule:        rgba(237, 228, 209, 0.10);
+}

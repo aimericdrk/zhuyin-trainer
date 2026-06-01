@@ -1,0 +1,92 @@
+.ts-wrap {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg);
+}
+
+.ts-main {
+  flex: 1;
+  padding: 8px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  max-width: 1600px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.ts-game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.ts-game>* {
+  width: 100%;
+}
+
+.ts-desktop-context {
+  display: none;
+}
+
+.ts-mobile-context {
+  display: block;
+}
+
+@media (min-width: 1280px) {
+  .ts-main--easy {
+    grid-template-columns: minmax(0, 2fr) minmax(280px, 1.5fr);
+    gap: 32px;
+  }
+
+  .ts-main--easy .ts-desktop-context {
+    display: block;
+    align-self: center;
+  }
+
+  .ts-main--easy .ts-mobile-context {
+    display: none;
+  }
+}
+
+.ts-strip-row {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  width: 100%;
+}
+
+.ts-strip-row > .is-strip {
+  grid-column: 2;
+}
+
+.ts-strip-switch {
+  grid-column: 3;
+  justify-self: center;
+  padding-left: 12px;
+}
+
+.ts-revealed {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 0;
+}
+
+.ts-continue {
+  padding: 12px 28px;
+  min-height: 48px;
+  border-radius: var(--radius-key);
+  background: var(--ok);
+  color: var(--surface);
+  font-family: var(--font-ui);
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.ts-continue:hover {
+  background: color-mix(in srgb, var(--ok) 80%, var(--ink));
+}

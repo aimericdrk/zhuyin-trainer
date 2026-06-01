@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Primary SEO -->
+    <title>Zhuyin Trainer · Learn Bopomofo with Pinyin and Tones</title>
+    <meta
+      name="description"
+      content="Free interactive Zhuyin (Bopomofo, ㄅㄆㄇㄈ) trainer. Practice mapping pinyin to zhuyin in easy mode, or type the full zhuyin and tone for real Chinese characters in hard mode. Bilingual English / French interface, light and dark themes, mobile-friendly."
+    />
+    <meta
+      name="keywords"
+      content="zhuyin, bopomofo, ㄅㄆㄇㄈ, pinyin to zhuyin, learn zhuyin, learn bopomofo, Taiwanese Mandarin, Chinese tones, Chinese keyboard, mandarin practice, learn Chinese, HSK"
+    />
+    <meta name="author" content="Zhuyin Trainer" />
+    <meta name="robots" content="index, follow" />
+    <meta name="application-name" content="Zhuyin Trainer" />
+    <meta name="generator" content="React" />
+    <link rel="canonical" href="https://zhuyin-trainer.web.app/" />
+
+    <!-- Theme color (light / dark variants) -->
+    <meta name="theme-color" content="#f5efe4" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#15181c" media="(prefers-color-scheme: dark)" />
+    <meta name="color-scheme" content="light dark" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Zhuyin Trainer" />
+    <meta property="og:title" content="Zhuyin Trainer · Learn Bopomofo with Pinyin and Tones" />
+    <meta
+      property="og:description"
+      content="Free interactive Zhuyin (Bopomofo) trainer. Practice pinyin → zhuyin or full zhuyin + tone with real Chinese characters. EN / FR, light and dark mode, mobile-friendly."
+    />
+    <meta property="og:url" content="https://zhuyin-trainer.web.app/" />
+    <meta property="og:image" content="https://zhuyin-trainer.web.app/og-image.png" />
+    <meta property="og:image:alt" content="Zhuyin Trainer — practice ㄅㄆㄇㄈ on an interactive keyboard" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="fr_FR" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Zhuyin Trainer · Learn Bopomofo" />
+    <meta
+      name="twitter:description"
+      content="Free interactive zhuyin (Bopomofo) practice with pinyin and tones. Bilingual, mobile-friendly, dark mode."
+    />
+    <meta name="twitter:image" content="https://zhuyin-trainer.web.app/og-image.png" />
+
+    <!-- Icons & PWA -->
+    <link rel="icon" href="%PUBLIC_URL%/icon.png" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/icon.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <!-- Apple mobile web app -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Zhuyin Trainer" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Serif+TC:wght@400;500;700&family=Source+Serif+4:ital,wght@0,400;0,500;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- No-flash theme bootstrap -->
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem('zhuyin.theme');
+          var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+          var theme = (saved === 'light' || saved === 'dark') ? saved : (prefersDark ? 'dark' : 'light');
+          document.documentElement.setAttribute('data-theme', theme);
+        } catch (e) {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      })();
+    </script>
+
+    <!-- Structured data (JSON-LD) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Zhuyin Trainer",
+        "alternateName": ["Bopomofo Trainer", "ㄅㄆㄇㄈ Trainer"],
+        "url": "https://zhuyin-trainer.web.app/",
+        "description": "Free interactive Zhuyin (Bopomofo) trainer with two difficulty modes, bilingual EN/FR interface, light/dark themes, and a real Chinese character dataset with example sentences.",
+        "applicationCategory": "EducationalApplication",
+        "applicationSubCategory": "LanguageLearning",
+        "operatingSystem": "Any",
+        "browserRequirements": "Requires JavaScript and a modern web browser",
+        "inLanguage": ["en", "fr"],
+        "isAccessibleForFree": true,
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "learningResourceType": "Drill and practice",
+        "educationalUse": "Practice",
+        "teaches": [
+          "Zhuyin (Bopomofo)",
+          "Pinyin",
+          "Mandarin Chinese tones",
+          "Chinese characters"
+        ],
+        "audience": {
+          "@type": "EducationalAudience",
+          "educationalRole": "student"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <noscript>
+      <header>
+        <h1>Zhuyin Trainer · Learn Bopomofo (ㄅㄆㄇㄈ) with Pinyin and Tones</h1>
+      </header>
+      <main>
+        <p>
+          <strong>Zhuyin Trainer</strong> is a free interactive web app for practicing the
+          Zhuyin (Bopomofo, 注音符號) phonetic system used in Taiwan to teach Mandarin
+          pronunciation.
+        </p>
+        <p>
+          The trainer offers two modes:
+        </p>
+        <ul>
+          <li>
+            <strong>Easy mode</strong> — see a pinyin syllable (e.g. <em>ma</em>) and select
+            the matching zhuyin symbols (ㄇㄚ) on an on-screen keyboard.
+          </li>
+          <li>
+            <strong>Hard mode</strong> — see a real Chinese character with its tone-marked
+            pinyin (e.g. 媽 / mā) and type the full zhuyin sequence including the tone mark.
+          </li>
+        </ul>
+        <p>
+          Every character is paired with an English (or French) meaning, an example
+          Chinese sentence, a word-by-word breakdown with pinyin and zhuyin, and a full
+          translation.
+        </p>
+        <p>
+          The app requires JavaScript. Please enable it in your browser to start
+          practicing.
+        </p>
+        <p>
+          Keywords: zhuyin, bopomofo, ㄅㄆㄇㄈ, pinyin to zhuyin, learn bopomofo,
+          Taiwanese Mandarin, Chinese tones, mandarin practice.
+        </p>
+      </main>
+    </noscript>
+    <div id="root"></div>
+  </body>
+</html>

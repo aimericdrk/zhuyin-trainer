@@ -1,0 +1,38 @@
+.ni-wrap {
+  display: flex;
+  justify-content: center;
+  padding: 8px 16px;
+}
+
+.ni-input {
+  width: 100%;
+  max-width: 560px;
+  height: 56px;
+  padding: 0 18px;
+  border-radius: var(--radius-key);
+  border: 2px solid var(--rule);
+  background: var(--surface);
+  color: var(--ink);
+  font-family: var(--font-cn);
+  font-size: clamp(20px, 4vw, 28px);
+  text-align: center;
+  transition: border-color 120ms ease, box-shadow 120ms ease;
+}
+
+.ni-input::placeholder {
+  font-family: var(--font-ui);
+  font-size: 16px;
+  color: var(--ink-soft);
+  opacity: 0.7;
+}
+
+.ni-input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 25%, transparent);
+}
+
+.ni-input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

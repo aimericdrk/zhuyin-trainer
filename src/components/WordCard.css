@@ -1,0 +1,36 @@
+.wc-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 16px;
+}
+
+.wc-char-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.wc-character {
+  font-family: var(--font-cn);
+  font-size: clamp(72px, 14vw, 140px);
+  line-height: 1;
+  color: var(--ink);
+  text-align: center;
+  word-break: keep-all;
+}
+
+.wc-pinyin {
+  font-family: var(--font-py);
+  font-size: clamp(22px, 3.5vw, 36px);
+  color: var(--ink-soft);
+  letter-spacing: 0.05em;
+}
+
+.wc-zhuyin {
+  font-family: var(--font-cn);
+  font-size: clamp(20px, 3vw, 30px);
+  color: var(--ink-soft);
+  letter-spacing: 0.05em;
+}

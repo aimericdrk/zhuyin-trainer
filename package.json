@@ -1,0 +1,47 @@
+{
+  "name": "frontend",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/dom": "^10.4.1",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@testing-library/user-event": "^13.5.0",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "firebase:login": "firebase login",
+    "firebase:accounts": "firebase login:list",
+    "firebase:init": "firebase init hosting",
+    "firebase:use-account": "firebase login:list 2>/dev/null | head -1 | grep -q 'aimeric.rouyer.pro@gmail.com' || firebase login:use aimeric.rouyer.pro@gmail.com",
+    "firebase:whoami": "echo '\\n=== Firebase deploy target check ===' && echo '\\n>> Logged-in accounts (active one is marked):' && firebase login:list && echo '\\n>> Project this folder will deploy to (from .firebaserc):' && firebase use && echo '\\n--- Ctrl+C now if anything above is wrong ---\\n'",
+    "predeploy": "npm run firebase:use-account && npm run firebase:whoami",
+    "deploy": "npm run build && firebase deploy --only hosting --account aimeric.rouyer.pro@gmail.com -P default",
+    "deploy:preview": "npm run build && firebase hosting:channel:deploy preview --account aimeric.rouyer.pro@gmail.com -P default"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

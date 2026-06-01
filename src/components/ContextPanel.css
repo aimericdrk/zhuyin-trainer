@@ -1,0 +1,180 @@
+.cp-wrap {
+  background: var(--surface);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  padding: 28px;
+}
+
+.cp-toggle {
+  display: none;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 8px 0;
+  color: var(--ink);
+  font-weight: 600;
+  text-align: left;
+}
+
+.cp-toggle-arrow {
+  display: inline-block;
+  width: 12px;
+  color: var(--accent);
+}
+
+.cp-body {
+  display: block;
+}
+
+.cp-section+.cp-section {
+  margin-top: 32px;
+}
+
+.cp-label {
+  font-family: var(--font-ui);
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin: 0 0 12px;
+}
+
+.cp-meaning {
+  margin: 0;
+  font-family: var(--font-py);
+  font-size: 26px;
+  color: var(--ink);
+}
+
+.cp-sentence {
+  margin: 0 0 18px;
+  font-family: var(--font-cn);
+  font-size: 32px;
+  line-height: 1.4;
+  color: var(--ink);
+}
+
+.cp-sentence-text {
+  font: inherit;
+  color: inherit;
+}
+
+.cp-han {
+  display: inline;
+  background: transparent;
+  border: none;
+  padding: 0 1px;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 120ms ease, color 120ms ease;
+}
+
+.cp-han:hover:not(:disabled),
+.cp-han:focus-visible:not(:disabled) {
+  background: var(--surface-hover, rgba(0, 0, 0, 0.06));
+  color: var(--accent);
+  outline: none;
+}
+
+.cp-han:disabled {
+  cursor: default;
+  color: inherit;
+}
+
+.cp-han--playing {
+  background: var(--accent-soft, rgba(0, 128, 200, 0.12));
+  color: var(--accent);
+}
+
+.cp-words {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 18px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px 22px;
+}
+
+.cp-word {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: transparent;
+  border: none;
+  padding: 6px 8px;
+  margin: 0;
+  border-radius: 8px;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 120ms ease;
+}
+
+.cp-word:hover:not(:disabled),
+.cp-word:focus-visible:not(:disabled) {
+  background: var(--surface-hover, rgba(0, 0, 0, 0.06));
+  outline: none;
+}
+
+.cp-word:disabled {
+  cursor: default;
+}
+
+.cp-word--playing {
+  background: var(--accent-soft, rgba(0, 128, 200, 0.12));
+}
+
+.cp-word-char {
+  font-family: var(--font-cn);
+  font-size: 24px;
+  color: var(--ink);
+}
+
+.cp-word-pinyin {
+  font-family: var(--font-py);
+  font-size: 16px;
+  color: var(--ink-soft);
+  margin-top: 2px;
+}
+
+.cp-word-zhuyin {
+  font-family: var(--font-cn);
+  font-size: 16px;
+  color: var(--ink-soft);
+  margin-top: 2px;
+}
+
+.cp-word-gloss {
+  font-family: var(--font-ui);
+  font-size: 16px;
+  color: var(--ink-soft);
+  margin-top: 4px;
+}
+
+.cp-translation {
+  margin: 0;
+  font-family: var(--font-py);
+  font-size: 28px;
+  font-style: italic;
+  color: var(--ink);
+  line-height: 1.5;
+}
+
+@media (max-width: 719px) {
+  .cp-wrap--collapsible .cp-toggle {
+    display: flex;
+  }
+
+  .cp-wrap--collapsible .cp-body--collapsed {
+    display: none;
+  }
+}
+
+.cp-rate-row {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 4px 12px;
+}

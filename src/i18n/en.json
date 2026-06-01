@@ -1,0 +1,41 @@
+{
+  "home": {
+    "title": "Zhuyin Trainer",
+    "easy": "Easy",
+    "easyDesc": "Type zhuyin + tone for a Chinese character",
+    "hard": "Hard",
+    "hardDesc": "Pick the meaning of a Chinese word"
+  },
+  "trainer": {
+    "skip": "Skip",
+    "solution": "Show solution",
+    "continue": "Continue",
+    "backspace": "Backspace",
+    "meaning": "Meaning",
+    "example": "Example",
+    "translation": "Translation",
+    "back": "Home",
+    "easyTitle": "Easy",
+    "hardTitle": "Hard",
+    "playCharacter": "Play character",
+    "playSentence": "Play sentence",
+    "playWord": "Play {word}",
+    "audioUnsupported": "Audio not available in this browser",
+    "shuffleKeyboard": "Shuffle keys",
+    "showCount": "Show zhuyin count",
+    "nativeInput": "Use phone keyboard",
+    "nativeInputPlaceholder": "Type zhuyin…",
+    "phoneLayout": "Phone keyboard layout",
+    "speechRate": "Speech rate",
+    "arrangeSentence": "Arrange to mean:"
+  },
+  "stats": {
+    "correct": "Correct",
+    "wrong": "Wrong",
+    "skipped": "Skipped"
+  },
+  "topbar": {
+    "theme": "Toggle theme",
+    "language": "Language"
+  }
+}

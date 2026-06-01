@@ -1,0 +1,120 @@
+.zk-board {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+  background: var(--surface);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+}
+
+.zk-section {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.zk-row {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.zk-key {
+  min-width: 44px;
+  min-height: 44px;
+  padding: 8px 10px;
+  border-radius: var(--radius-key);
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-cn);
+  font-size: clamp(20px, 3.2vw, 30px);
+  border: 1px solid var(--rule);
+  transition: transform 80ms ease, background 120ms ease, border-color 120ms ease;
+}
+
+.zk-key:hover:not(:disabled) {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+}
+
+.zk-key:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.zk-key:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.zk-divider {
+  height: 1px;
+  background: var(--rule);
+  margin: 4px 0;
+}
+
+.zk-bottom-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.zk-tones {
+  display: flex;
+  gap: 6px;
+}
+
+.zk-tone {
+  font-family: var(--font-py);
+}
+
+@media (max-width: 719px) {
+  .zk-board {
+    gap: 8px;
+    padding: 10px;
+  }
+  .zk-row {
+    gap: 4px;
+  }
+  .zk-key {
+    min-width: 32px;
+    min-height: 32px;
+    padding: 4px 6px;
+    font-size: clamp(15px, 4.2vw, 20px);
+  }
+  .zk-tones {
+    gap: 4px;
+  }
+  .zk-section:not(.zk-bottom-row) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4px;
+  }
+  .zk-section:not(.zk-bottom-row) .zk-row {
+    display: contents;
+  }
+}
+
+@media (min-width: 720px) {
+  .zk-board {
+    max-width: 820px;
+    margin: 0 auto;
+  }
+  .zk-section:not(.zk-bottom-row) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .zk-section:not(.zk-bottom-row) .zk-row {
+    display: contents;
+  }
+}
