@@ -1,0 +1,142 @@
+.mm-wrap {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg);
+}
+
+.mm-main {
+  flex: 1;
+  padding: 18px 16px 48px;
+  max-width: 640px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.mm-intro {
+  text-align: center;
+  font-family: var(--font-ui);
+  color: var(--ink-soft);
+  font-size: 15px;
+  margin: 4px 0 16px;
+}
+
+.mm-decks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.mm-deck {
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--rule);
+  background: var(--surface);
+  color: var(--ink-soft);
+  font-family: var(--font-cn);
+  font-size: 15px;
+  transition: all 120ms ease;
+}
+.mm-deck:hover { border-color: var(--accent); }
+.mm-deck--active {
+  background: var(--accent);
+  color: var(--surface);
+  border-color: var(--accent);
+}
+
+.mm-status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.mm-moves {
+  font-family: var(--font-ui);
+  font-variant-numeric: tabular-nums;
+  color: var(--ink-soft);
+}
+
+.mm-best {
+  font-family: var(--font-ui);
+  font-variant-numeric: tabular-nums;
+  color: var(--ok);
+}
+
+.mm-new {
+  padding: 6px 14px;
+  border-radius: var(--radius-key);
+  border: 1px solid var(--rule);
+  background: var(--surface);
+  color: var(--ink);
+  font-family: var(--font-ui);
+}
+.mm-new:hover { border-color: var(--accent); }
+
+.mm-won {
+  text-align: center;
+  font-family: var(--font-ui);
+  font-weight: 600;
+  color: var(--ok);
+  margin: 0 0 12px;
+}
+
+.mm-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+@media (max-width: 420px) {
+  .mm-grid { gap: 7px; }
+}
+
+.mm-tile {
+  aspect-ratio: 3 / 4;
+  border-radius: var(--radius-card);
+  border: 1px solid var(--rule);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  text-align: center;
+  transition: transform 100ms ease, background 150ms ease, border-color 150ms ease, opacity 200ms ease;
+}
+
+.mm-tile--back {
+  background: var(--accent);
+  color: var(--surface);
+  cursor: pointer;
+}
+.mm-tile--back:hover { transform: translateY(-2px); }
+
+.mm-back-mark {
+  font-family: var(--font-cn);
+  font-size: 28px;
+  opacity: 0.85;
+}
+
+.mm-tile--face {
+  background: var(--surface);
+  color: var(--ink);
+}
+
+.mm-tile--matched {
+  border-color: var(--ok);
+  background: color-mix(in srgb, var(--ok) 14%, var(--surface));
+  opacity: 0.85;
+  cursor: default;
+}
+
+.mm-zh {
+  font-family: var(--font-cn);
+  font-size: clamp(20px, 6vw, 30px);
+}
+
+.mm-gloss {
+  font-family: var(--font-ui);
+  font-size: clamp(12px, 3.2vw, 15px);
+  line-height: 1.25;
+}

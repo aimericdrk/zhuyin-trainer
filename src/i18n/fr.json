@@ -1,10 +1,186 @@
 {
   "home": {
     "title": "Entraîneur de Zhuyin",
+    "subtitle": "Apprends le mandarin — sons, mots et phrases du quotidien.",
+    "streak": "{n} jours d'affilée",
+    "daysTotal": "{n} jours pratiqués au total",
+    "sections": {
+      "foundations": "Bases",
+      "study": "Apprendre",
+      "practice": "Entraînement",
+      "play": "Jeux"
+    },
     "easy": "Facile",
     "easyDesc": "Tape le zhuyin et le ton pour un caractère chinois",
     "hard": "Difficile",
-    "hardDesc": "Choisis le sens d'un mot chinois"
+    "hardDesc": "Choisis le sens d'un mot chinois",
+    "games": "Jeux",
+    "gamesDesc": "{count} mini-jeux : heure, nombres, commander et plus",
+    "bopomofo": "Table Zhuyin",
+    "bopomofoDesc": "Les 37 sons bopomofo — touche pour écouter",
+    "flashcards": "Cartes",
+    "flashcardsDesc": "Retourne les cartes et suis tes acquis",
+    "memory": "Memory",
+    "memoryDesc": "Associe les caractères à leur sens",
+    "review": "Révision",
+    "reviewDesc": "Répétition espacée — révise tes cartes faibles",
+    "reading": "Lecture",
+    "readingDesc": "Lis des phrases — touche un mot pour le consulter",
+    "writing": "Écriture",
+    "writingDesc": "Trace les caractères sur une grille",
+    "chat": "Conversation",
+    "chatDesc": "Dialogue guidé — choisis tes réponses",
+    "patterns": "Structures",
+    "patternsDesc": "Complète le connecteur : 因為 / 所以 / 如果…"
+  },
+  "tools": {
+    "bopomofo": {
+      "title": "Table Zhuyin 注音",
+      "intro": "Touche un symbole pour entendre un mot qui utilise son son.",
+      "initials": "Initiales",
+      "medials": "Médianes",
+      "finals": "Finales",
+      "tones": "Tons"
+    },
+    "memory": {
+      "title": "Memory",
+      "intro": "Retourne deux cartes pour associer un caractère à son sens.",
+      "moves": "Coups",
+      "best": "Record : {n}",
+      "newGame": "Nouvelle partie",
+      "won": "Résolu en {moves} coups !"
+    },
+    "flashcards": {
+      "title": "Cartes",
+      "tapToFlip": "touche pour retourner",
+      "shuffle": "Mélanger",
+      "knew": "Je le savais",
+      "review": "À revoir"
+    },
+    "reading": {
+      "title": "Lecture 閱讀",
+      "intro": "Touche un mot pour l'entendre et voir sa lecture et son sens.",
+      "tapHint": "Touche un mot ci-dessus pour le consulter.",
+      "showTranslation": "Voir la traduction",
+      "hideTranslation": "Masquer la traduction",
+      "next": "Suivant"
+    },
+    "writing": {
+      "title": "Écriture 寫字",
+      "intro": "Trace le caractère sur la grille en suivant le modèle.",
+      "clear": "Effacer",
+      "strokes": "{n} traits",
+      "animate": "Voir l'ordre des traits",
+      "practice": "S'entraîner",
+      "reset": "Réinitialiser",
+      "showGuide": "Afficher le modèle",
+      "hideGuide": "Masquer le modèle",
+      "tipsTitle": "Ordre des traits",
+      "cats": {
+        "numbers": "Nombres",
+        "basics": "Bases",
+        "nature": "Nature",
+        "food": "Nourriture",
+        "body": "Le corps",
+        "animals": "Animaux",
+        "places": "Lieux",
+        "actions": "Actions",
+        "describe": "Décrire",
+        "everyday": "Courant"
+      },
+      "rules": {
+        "topToBottom": "Haut → bas",
+        "leftToRight": "Gauche → droite",
+        "horizFirst": "Horizontal → vertical",
+        "outsideFirst": "Extérieur → intérieur",
+        "centerFirst": "Centre → côtés",
+        "closeLast": "Fermer en dernier"
+      }
+    },
+    "chat": {
+      "title": "Conversation 對話",
+      "yourReply": "Ta réponse",
+      "tryAgain": "Pas tout à fait — essaie une autre réponse.",
+      "finished": "Conversation terminée !",
+      "restart": "Recommencer"
+    },
+    "review": {
+      "title": "Révision 複習",
+      "mastery": "Maîtrise : {n} %",
+      "again": "À revoir",
+      "gotIt": "Acquis",
+      "sessionDone": "{right} / {total} cette fois",
+      "newSession": "Nouvelle série"
+    },
+    "patterns": {
+      "title": "Structures 句型",
+      "intro": "Choisis le connecteur qui complète la phrase.",
+      "next": "Suivant"
+    }
+  },
+  "games": {
+    "title": "Jeux",
+    "intro": "Choisis un mini-jeu. Chacun travaille un coin du mandarin de tous les jours.",
+    "playAnswer": "Écouter la réponse",
+    "replay": "Réécouter",
+    "listenArrange": "Écoute, puis arrange les mots",
+    "cats": {
+      "build": "Composer des phrases",
+      "vocab": "Vocabulaire",
+      "culture": "Culture & expressions",
+      "ear": "Sons & écoute"
+    },
+    "time": { "title": "Dire l'heure", "desc": "Compose l'heure parlée : 點 / 半 / 刻 / 差" },
+    "numbers": { "title": "Les nombres", "desc": "Lis les nombres à voix haute en chinois" },
+    "counting": { "title": "Compter", "desc": "Nombre + classificateur + nom (兩杯茶)" },
+    "dates": { "title": "Dates & jours", "desc": "Dis le mois, le jour et le jour de la semaine" },
+    "money": { "title": "L'argent", "desc": "Dis les prix avec 塊 / 毛 / 分" },
+    "measureWords": { "title": "Classificateurs", "desc": "Choisis le bon 量詞 pour un nom" },
+    "ordering": { "title": "Commander", "desc": "Phrases utiles au restaurant" },
+    "directions": { "title": "Directions", "desc": "Gauche, droite, tout droit et positions" },
+    "family": { "title": "La famille", "desc": "Les noms des proches" },
+    "colors": { "title": "Les couleurs", "desc": "Associe la couleur à son mot" },
+    "weather": { "title": "La météo", "desc": "Parle du temps qu'il fait" },
+    "greetings": { "title": "Salutations", "desc": "Que dire quand…" },
+    "animals": { "title": "Les animaux", "desc": "Nomme l'animal" },
+    "food": { "title": "Nourriture", "desc": "Aliments et boissons du quotidien" },
+    "body": { "title": "Le corps", "desc": "Nomme les parties du corps" },
+    "countries": { "title": "Les pays", "desc": "Nomme le pays" },
+    "jobs": { "title": "Les métiers", "desc": "Professions et rôles" },
+    "verbs": { "title": "Les verbes", "desc": "Verbes courants du quotidien" },
+    "adjectives": { "title": "Adjectifs", "desc": "Mots descriptifs et contraires" },
+    "questionWords": { "title": "Mots interrogatifs", "desc": "什麼 / 誰 / 哪裡 / 為什麼…" },
+    "transport": { "title": "Transports", "desc": "Comment se déplacer" },
+    "places": { "title": "Les lieux", "desc": "Bâtiments et lieux en ville" },
+    "timeWords": { "title": "Mots du temps", "desc": "今天 / 明天 / 現在 / 星期…" },
+    "hobbies": { "title": "Loisirs", "desc": "Ce qu'on aime faire" },
+    "feelings": { "title": "Émotions", "desc": "Comment tu te sens" },
+    "clothing": { "title": "Vêtements", "desc": "Ce qu'on porte" },
+    "fruits": { "title": "Fruits", "desc": "Nomme le fruit" },
+    "drinks": { "title": "Boissons", "desc": "Boissons chaudes et froides" },
+    "sports": { "title": "Sports", "desc": "Sports et activités" },
+    "household": { "title": "Mobilier", "desc": "Meubles et objets de la maison" },
+    "subjects": { "title": "Matières", "desc": "Les matières scolaires" },
+    "tech": { "title": "Technologie", "desc": "Ordinateurs et appareils" },
+    "frequency": { "title": "Fréquence", "desc": "Toujours, souvent, parfois…" },
+    "rooms": { "title": "Les pièces", "desc": "Les pièces de la maison" },
+    "routine": { "title": "Routine", "desc": "Activités quotidiennes" },
+    "tableware": { "title": "Couverts", "desc": "Bols, baguettes et plus" },
+    "stationery": { "title": "Fournitures", "desc": "Stylos, papier et fournitures" },
+    "calendar": { "title": "Mois & saisons", "desc": "Les mois de l'année et les saisons" },
+    "pronouns": { "title": "Pronoms", "desc": "je, tu, il, ceci, cela…" },
+    "connectors": { "title": "Connecteurs", "desc": "et, mais, parce que, donc…" },
+    "grammar": { "title": "Mots grammaticaux", "desc": "particules 的得地, 了過著, 把被, 才就…" },
+    "radicals": { "title": "Radicaux", "desc": "Composants des caractères 部首" },
+    "zodiac": { "title": "Zodiaque", "desc": "Les 12 animaux du zodiaque" },
+    "festivals": { "title": "Fêtes", "desc": "Fêtes et célébrations" },
+    "idioms": { "title": "Expressions 成語", "desc": "Associe le proverbe en 4 caractères" },
+    "strokes": { "title": "Nombre de traits", "desc": "Combien de traits dans ce caractère ?" },
+    "sounds": { "title": "Le bon son", "desc": "Symbole zhuyin → son pinyin" },
+    "pinyin": { "title": "Lire le pinyin", "desc": "Vois un caractère, choisis sa lecture" },
+    "dictation": { "title": "Dictée", "desc": "Écoute une phrase, arrange les mots" },
+    "listening": { "title": "Compréhension", "desc": "Écoute un mot, choisis le caractère" },
+    "tones": { "title": "Tons à l'oreille", "desc": "Écoute et nomme le ton" }
   },
   "trainer": {
     "skip": "Passer",
@@ -36,6 +212,12 @@
   },
   "topbar": {
     "theme": "Changer de thème",
-    "language": "Langue"
+    "language": "Langue",
+    "annotations": "Aides à la lecture",
+    "pinyin": "Afficher le pinyin",
+    "zhuyin": "Afficher le zhuyin",
+    "meaning": "Afficher le sens",
+    "autoplay": "Lecture audio auto",
+    "zhuyinSize": "Taille du zhuyin"
   }
 }

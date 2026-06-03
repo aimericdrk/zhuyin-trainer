@@ -17,6 +17,10 @@
   --font-cn:    'Noto Serif TC', 'Songti TC', 'PingFang TC', serif;
   --font-py:    'Source Serif 4', 'Source Serif Pro', Georgia, serif;
   --font-ui:    'Inter', system-ui, -apple-system, sans-serif;
+
+  /* Global multiplier for the size of zhuyin (bopomofo) annotations.
+     Overridden at runtime on <html> by AnnotationContext; default = M (1.3). */
+  --zhuyin-scale: 1.3;
 }
 
 [data-theme="dark"] {

@@ -1,0 +1,52 @@
+.clk-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.clk-face {
+  display: block;
+}
+
+.clk-rim {
+  fill: var(--surface);
+  stroke: var(--rule);
+  stroke-width: 2;
+}
+
+.clk-tick {
+  stroke: var(--ink-soft);
+  stroke-width: 1.5;
+}
+
+.clk-tick--major {
+  stroke: var(--ink);
+  stroke-width: 2.5;
+}
+
+.clk-hand {
+  stroke: var(--ink);
+  stroke-linecap: round;
+}
+
+.clk-hand--hour {
+  stroke-width: 4;
+}
+
+.clk-hand--minute {
+  stroke-width: 2.5;
+  stroke: var(--accent);
+}
+
+.clk-pin {
+  fill: var(--accent);
+}
+
+.clk-digital {
+  font-family: var(--font-py);
+  font-variant-numeric: tabular-nums;
+  font-size: 22px;
+  color: var(--ink);
+  letter-spacing: 1px;
+}

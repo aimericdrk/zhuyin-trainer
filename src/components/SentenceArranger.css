@@ -67,6 +67,8 @@
   border-radius: var(--radius-key);
   cursor: pointer;
   transition: background 120ms ease, border-color 120ms ease, transform 80ms ease;
+  touch-action: none;
+  user-select: none;
 }
 
 .sa-card:hover:not(:disabled) {
@@ -89,9 +91,39 @@
   line-height: 1;
 }
 
-.sa-card-gloss {
-  font-family: var(--font-ui);
+.sa-card-anno {
   font-size: 12px;
   color: var(--ink-soft);
-  margin-top: 4px;
+  margin-top: 3px;
+  line-height: 1.2;
+}
+.sa-card-anno--zh { font-family: var(--font-cn); font-size: calc(12px * var(--zhuyin-scale, 1)); }
+.sa-card-anno--py { font-family: var(--font-py); font-style: italic; color: var(--accent); }
+.sa-card-anno--mn { font-family: var(--font-ui); }
+
+.sa-card--dragging {
+  opacity: 0.3;
+}
+
+.sa-card--ghost {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  background: var(--surface);
+  border-color: var(--accent);
+}
+
+.sa-drag-overlay {
+  position: fixed;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+}
+
+.sa-placed--hover {
+  border-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 8%, var(--surface));
+}
+
+.sa-available--hover {
+  border-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 6%, var(--surface));
 }

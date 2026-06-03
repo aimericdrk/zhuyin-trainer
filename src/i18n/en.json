@@ -1,10 +1,186 @@
 {
   "home": {
     "title": "Zhuyin Trainer",
+    "subtitle": "Learn Mandarin Chinese — sounds, words, and everyday phrases.",
+    "streak": "{n}-day streak",
+    "daysTotal": "{n} days practised in total",
+    "sections": {
+      "foundations": "Foundations",
+      "study": "Study",
+      "practice": "Practice",
+      "play": "Games"
+    },
     "easy": "Easy",
     "easyDesc": "Type zhuyin + tone for a Chinese character",
     "hard": "Hard",
-    "hardDesc": "Pick the meaning of a Chinese word"
+    "hardDesc": "Pick the meaning of a Chinese word",
+    "games": "Games",
+    "gamesDesc": "{count} mini-games: time, numbers, ordering and more",
+    "bopomofo": "Zhuyin Chart",
+    "bopomofoDesc": "The 37 bopomofo sounds — tap to listen",
+    "flashcards": "Flashcards",
+    "flashcardsDesc": "Flip cards and track what you know",
+    "memory": "Memory Match",
+    "memoryDesc": "Match characters to their meanings",
+    "review": "Review",
+    "reviewDesc": "Spaced repetition — drill your weakest cards",
+    "reading": "Reading",
+    "readingDesc": "Read sentences — tap any word to look it up",
+    "writing": "Writing",
+    "writingDesc": "Trace characters on a practice grid",
+    "chat": "Conversation",
+    "chatDesc": "Hold a guided dialogue — choose your replies",
+    "patterns": "Sentence Patterns",
+    "patternsDesc": "Fill the connective: 因為 / 所以 / 如果…"
+  },
+  "tools": {
+    "bopomofo": {
+      "title": "Zhuyin Chart 注音",
+      "intro": "Tap any symbol to hear an example word that uses its sound.",
+      "initials": "Initials",
+      "medials": "Medials",
+      "finals": "Finals",
+      "tones": "Tones"
+    },
+    "memory": {
+      "title": "Memory Match",
+      "intro": "Flip two cards to match a character with its meaning.",
+      "moves": "Moves",
+      "best": "Best: {n}",
+      "newGame": "New game",
+      "won": "Solved in {moves} moves!"
+    },
+    "flashcards": {
+      "title": "Flashcards",
+      "tapToFlip": "tap to flip",
+      "shuffle": "Shuffle",
+      "knew": "I knew it",
+      "review": "Review"
+    },
+    "reading": {
+      "title": "Reading 閱讀",
+      "intro": "Tap any word to hear it and see its reading and meaning.",
+      "tapHint": "Tap a word above to look it up.",
+      "showTranslation": "Show translation",
+      "hideTranslation": "Hide translation",
+      "next": "Next"
+    },
+    "writing": {
+      "title": "Writing 寫字",
+      "intro": "Trace the character on the grid. Follow the faint guide.",
+      "clear": "Clear",
+      "strokes": "{n} strokes",
+      "animate": "Show stroke order",
+      "practice": "Practice",
+      "reset": "Reset",
+      "showGuide": "Show guide",
+      "hideGuide": "Hide guide",
+      "tipsTitle": "Stroke order",
+      "cats": {
+        "numbers": "Numbers",
+        "basics": "Basics",
+        "nature": "Nature",
+        "food": "Food",
+        "body": "Body",
+        "animals": "Animals",
+        "places": "Places",
+        "actions": "Actions",
+        "describe": "Describing",
+        "everyday": "Everyday"
+      },
+      "rules": {
+        "topToBottom": "Top → bottom",
+        "leftToRight": "Left → right",
+        "horizFirst": "Horizontal → vertical",
+        "outsideFirst": "Outside → inside",
+        "centerFirst": "Centre → sides",
+        "closeLast": "Close box last"
+      }
+    },
+    "chat": {
+      "title": "Conversation 對話",
+      "yourReply": "Your reply",
+      "tryAgain": "Not quite — try another reply.",
+      "finished": "Conversation complete!",
+      "restart": "Start over"
+    },
+    "review": {
+      "title": "Review 複習",
+      "mastery": "Mastery: {n}%",
+      "again": "Again",
+      "gotIt": "Got it",
+      "sessionDone": "{right} / {total} this round",
+      "newSession": "New session"
+    },
+    "patterns": {
+      "title": "Sentence Patterns 句型",
+      "intro": "Pick the connecting word that completes the sentence.",
+      "next": "Next"
+    }
+  },
+  "games": {
+    "title": "Games",
+    "intro": "Pick a mini-game. Each one drills a different corner of everyday Mandarin.",
+    "playAnswer": "Play answer",
+    "replay": "Play again",
+    "listenArrange": "Listen, then arrange the words",
+    "cats": {
+      "build": "Build phrases",
+      "vocab": "Vocabulary",
+      "culture": "Culture & idioms",
+      "ear": "Sound & listening"
+    },
+    "time": { "title": "Tell the Time", "desc": "Build the spoken time: 點 / 半 / 刻 / 差" },
+    "numbers": { "title": "Numbers", "desc": "Read numerals aloud in Chinese" },
+    "counting": { "title": "Counting Things", "desc": "Number + measure word + noun (兩杯茶)" },
+    "dates": { "title": "Dates & Days", "desc": "Say the month, day and weekday" },
+    "money": { "title": "Money", "desc": "Say prices with 塊 / 毛 / 分" },
+    "measureWords": { "title": "Measure Words", "desc": "Choose the right 量詞 for a noun" },
+    "ordering": { "title": "Ordering Food", "desc": "Useful restaurant phrases" },
+    "directions": { "title": "Directions", "desc": "Left, right, straight and positions" },
+    "family": { "title": "Family", "desc": "Names for relatives" },
+    "colors": { "title": "Colours", "desc": "Match the colour to its word" },
+    "weather": { "title": "Weather", "desc": "Talk about the weather" },
+    "greetings": { "title": "Greetings", "desc": "The right thing to say when…" },
+    "animals": { "title": "Animals", "desc": "Name the animal" },
+    "food": { "title": "Food & Drink", "desc": "Everyday food and drinks" },
+    "body": { "title": "Body Parts", "desc": "Name parts of the body" },
+    "countries": { "title": "Countries", "desc": "Name the country" },
+    "jobs": { "title": "Jobs", "desc": "Occupations and roles" },
+    "verbs": { "title": "Action Verbs", "desc": "Common everyday verbs" },
+    "adjectives": { "title": "Adjectives", "desc": "Describing words and opposites" },
+    "questionWords": { "title": "Question Words", "desc": "什麼 / 誰 / 哪裡 / 為什麼…" },
+    "transport": { "title": "Transport", "desc": "Ways to get around" },
+    "places": { "title": "Places", "desc": "Buildings and places around town" },
+    "timeWords": { "title": "Time Words", "desc": "今天 / 明天 / 現在 / 星期…" },
+    "hobbies": { "title": "Hobbies", "desc": "Things people like to do" },
+    "feelings": { "title": "Feelings", "desc": "How you feel" },
+    "clothing": { "title": "Clothing", "desc": "What people wear" },
+    "fruits": { "title": "Fruits", "desc": "Name the fruit" },
+    "drinks": { "title": "Drinks", "desc": "Beverages, hot and cold" },
+    "sports": { "title": "Sports", "desc": "Sports and activities" },
+    "household": { "title": "Household", "desc": "Furniture and home items" },
+    "subjects": { "title": "School Subjects", "desc": "Subjects you study" },
+    "tech": { "title": "Technology", "desc": "Computers and devices" },
+    "frequency": { "title": "Frequency", "desc": "Always, often, sometimes…" },
+    "rooms": { "title": "Rooms", "desc": "Rooms in a home" },
+    "routine": { "title": "Daily Routine", "desc": "Everyday activities" },
+    "tableware": { "title": "Tableware", "desc": "Bowls, chopsticks and more" },
+    "stationery": { "title": "Stationery", "desc": "Pens, paper and school supplies" },
+    "calendar": { "title": "Months & Seasons", "desc": "Months of the year and seasons" },
+    "pronouns": { "title": "Pronouns", "desc": "I, you, he, this, that…" },
+    "connectors": { "title": "Connectors", "desc": "and, but, because, so…" },
+    "grammar": { "title": "Grammar Words", "desc": "particles 的得地, 了過著, 把被, 才就…" },
+    "radicals": { "title": "Radicals", "desc": "Character building blocks 部首" },
+    "zodiac": { "title": "Zodiac", "desc": "The 12 zodiac animals" },
+    "festivals": { "title": "Festivals", "desc": "Holidays and celebrations" },
+    "idioms": { "title": "Idioms 成語", "desc": "Match the four-character idiom" },
+    "strokes": { "title": "Stroke Count", "desc": "How many strokes in this character?" },
+    "sounds": { "title": "Sound Match", "desc": "Zhuyin symbol → its pinyin sound" },
+    "pinyin": { "title": "Read Pinyin", "desc": "See a character, pick how it's read" },
+    "dictation": { "title": "Dictation", "desc": "Hear a sentence, arrange the words" },
+    "listening": { "title": "Listening", "desc": "Hear a word, pick the character" },
+    "tones": { "title": "Tones by Ear", "desc": "Listen and name the tone" }
   },
   "trainer": {
     "skip": "Skip",
@@ -36,6 +212,12 @@
   },
   "topbar": {
     "theme": "Toggle theme",
-    "language": "Language"
+    "language": "Language",
+    "annotations": "Reading aids",
+    "pinyin": "Show pinyin",
+    "zhuyin": "Show zhuyin",
+    "meaning": "Show meaning",
+    "autoplay": "Auto-play audio",
+    "zhuyinSize": "Zhuyin size"
   }
 }

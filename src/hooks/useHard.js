@@ -80,6 +80,8 @@ export function buildOrderQuestion(pool, prevTargetId = null, rand = Math.random
   const sentenceWords = words.map((w, i) => ({
     id: `w-${i}`,
     char: w.char,
+    pinyin: w.pinyin,
+    zhuyin: w.zhuyin,
     en: w.en,
     fr: w.fr,
   }));

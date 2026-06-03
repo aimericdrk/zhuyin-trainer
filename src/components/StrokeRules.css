@@ -1,0 +1,62 @@
+.sr-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 12px;
+  width: 100%;
+}
+
+.sr-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 12px 8px;
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-card);
+}
+
+.sr-svg {
+  background: color-mix(in srgb, var(--accent) 4%, var(--surface));
+  border-radius: 8px;
+}
+
+.sr-stroke {
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.sr-stroke--last {
+  stroke: var(--accent);
+}
+
+.sr-num-bg {
+  fill: var(--accent);
+}
+.sr-num-bg--last {
+  fill: var(--bad);
+}
+
+.sr-num {
+  fill: var(--surface);
+  font-family: var(--font-ui);
+  font-size: 8px;
+  font-weight: 700;
+  text-anchor: middle;
+}
+
+.sr-char {
+  font-family: var(--font-cn);
+  font-size: 18px;
+  color: var(--ink-soft);
+}
+
+.sr-label {
+  font-family: var(--font-ui);
+  font-size: 12px;
+  color: var(--ink-soft);
+  text-align: center;
+}

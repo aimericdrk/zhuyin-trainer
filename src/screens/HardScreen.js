@@ -89,8 +89,9 @@ export default function HardScreen({ onBack }) {
                 available={state.available}
                 placed={state.placed}
                 status={state.status}
-                onPlace={(wordId) => dispatch({ type: 'PLACE_WORD', wordId })}
+                onPlace={(wordId, toIndex) => dispatch({ type: 'PLACE_WORD', wordId, toIndex })}
                 onRemove={(wordId) => dispatch({ type: 'REMOVE_WORD', wordId })}
+                onReorder={(fromIndex, toIndex) => dispatch({ type: 'REORDER_PLACED', fromIndex, toIndex })}
               />
             </section>
           </>

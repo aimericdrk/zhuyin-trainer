@@ -1,9 +1,19 @@
 import { useTheme } from '../theme/ThemeContext';
+import { useAnnotation } from '../theme/AnnotationContext';
+import { useAutoPlay } from '../theme/SpeechContext';
 import { useI18n } from '../i18n/I18nContext';
 import './TopBar.css';
 
+const ANNOT_PILLS = [
+  { key: 'pinyin', label: '拼' },
+  { key: 'zhuyin', label: 'ㄅ' },
+  { key: 'meaning', label: '英' },
+];
+
 export default function TopBar({ title, onBack, stats }) {
   const { theme, toggleTheme } = useTheme();
+  const { annot, toggle, cycleZhuyinScale, zhuyinScaleLabel } = useAnnotation();
+  const { autoPlay, toggleAutoPlay } = useAutoPlay();
   const { lang, toggleLang, t } = useI18n();
 
   return (
@@ -24,6 +34,37 @@ export default function TopBar({ title, onBack, stats }) {
         )}
       </div>
       <div className="tb-right">
+        <span className="tb-annot" role="group" aria-label={t('topbar.annotations')}>
+          {ANNOT_PILLS.map((p) => (
+            <button
+              key={p.key}
+              className={`tb-pill${annot[p.key] ? ' tb-pill--on' : ''}`}
+              onClick={() => toggle(p.key)}
+              aria-pressed={annot[p.key]}
+              aria-label={t(`topbar.${p.key}`)}
+              title={t(`topbar.${p.key}`)}
+            >
+              {p.label}
+            </button>
+          ))}
+          <button
+            className="tb-pill tb-pill--size"
+            onClick={cycleZhuyinScale}
+            aria-label={t('topbar.zhuyinSize')}
+            title={`${t('topbar.zhuyinSize')} · ${zhuyinScaleLabel}`}
+          >
+            ㄅ<sup className="tb-pill-sz">{zhuyinScaleLabel}</sup>
+          </button>
+        </span>
+        <button
+          className={`tb-pill tb-pill--emoji${autoPlay ? ' tb-pill--on' : ''}`}
+          onClick={toggleAutoPlay}
+          aria-pressed={autoPlay}
+          aria-label={t('topbar.autoplay')}
+          title={t('topbar.autoplay')}
+        >
+          {autoPlay ? '🔊' : '🔇'}
+        </button>
         <button className="tb-icon" onClick={toggleTheme} aria-label={t('topbar.theme')}>
           {theme === 'dark' ? '☀' : '🌙'}
         </button>

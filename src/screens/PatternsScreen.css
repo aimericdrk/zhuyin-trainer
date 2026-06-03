@@ -1,0 +1,165 @@
+.pt-wrap {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg);
+}
+
+.pt-main {
+  flex: 1;
+  padding: 20px 16px 48px;
+  max-width: 620px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.pt-intro {
+  text-align: center;
+  font-family: var(--font-ui);
+  color: var(--ink-soft);
+  font-size: 15px;
+  margin: 0;
+}
+.pt-count {
+  font-family: var(--font-ui);
+  font-variant-numeric: tabular-nums;
+  font-size: 13px;
+  color: var(--ink-soft);
+}
+
+.pt-sentence {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 6px 2px;
+  color: var(--ink);
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  padding: 22px 18px;
+  width: 100%;
+  text-align: center;
+}
+
+/* ruby: character with its reading aligned underneath */
+.pt-ruby {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.15;
+}
+.pt-ruby-char {
+  font-family: var(--font-cn);
+  font-size: clamp(24px, 6vw, 34px);
+}
+.pt-ruby-zh {
+  font-family: var(--font-cn);
+  font-size: calc(12px * var(--zhuyin-scale, 1));
+  color: var(--ink-soft);
+  margin-top: 3px;
+}
+.pt-ruby-py {
+  font-family: var(--font-py);
+  font-style: italic;
+  font-size: 12px;
+  color: var(--accent);
+}
+.pt-ruby--ok .pt-ruby-char { color: var(--ok); }
+
+.pt-slot .pt-ruby-char {
+  min-width: 1.6em;
+  color: var(--accent);
+  border-bottom: 3px solid var(--accent);
+}
+.pt-slot--bad .pt-ruby-char { color: var(--bad); border-bottom-color: var(--bad); }
+
+.pt-gloss {
+  font-family: var(--font-py);
+  font-style: italic;
+  font-size: clamp(15px, 4vw, 19px);
+  color: var(--ink-soft);
+  text-align: center;
+  margin: 0;
+}
+
+.pt-meaning {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.pt-words {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px 8px;
+  max-width: 640px;
+}
+
+.pt-word {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4px 8px;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-card);
+  background: var(--surface);
+}
+
+.pt-word-char { font-family: var(--font-cn); font-size: 16px; color: var(--ink); }
+.pt-word-mn { font-family: var(--font-ui); font-size: 11.5px; color: var(--ink-soft); text-align: center; }
+
+.pt-options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  width: 100%;
+}
+@media (min-width: 560px) { .pt-options { grid-template-columns: repeat(4, 1fr); } }
+
+.pt-opt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  padding: 12px 8px;
+  border-radius: var(--radius-card);
+  border: 1px solid var(--rule);
+  background: var(--surface);
+  color: var(--ink);
+  transition: background 120ms ease, border-color 120ms ease, transform 80ms ease;
+}
+.pt-opt:hover:not(:disabled) { border-color: var(--accent); background: var(--bg); }
+.pt-opt:active:not(:disabled) { transform: translateY(1px); }
+.pt-opt:disabled { opacity: 0.5; }
+.pt-opt--ok { background: color-mix(in srgb, var(--ok) 16%, var(--surface)); border-color: var(--ok); color: var(--ok); opacity: 1; }
+.pt-opt--bad { background: color-mix(in srgb, var(--bad) 14%, var(--surface)); border-color: var(--bad); color: var(--bad); opacity: 1; }
+
+.pt-opt-zh { font-family: var(--font-cn); font-size: 22px; }
+.pt-anno { display: flex; flex-direction: column; align-items: center; line-height: 1.2; }
+.pt-anno-zh { font-family: var(--font-cn); font-size: calc(12px * var(--zhuyin-scale, 1)); color: var(--ink-soft); }
+.pt-anno-py { font-family: var(--font-py); font-style: italic; font-size: 12px; color: var(--ink-soft); }
+.pt-anno-mn { font-family: var(--font-ui); font-size: 11.5px; color: var(--ink-soft); }
+
+.pt-actions { padding-top: 4px; }
+.pt-btn {
+  padding: 11px 24px;
+  min-height: 46px;
+  border-radius: var(--radius-key);
+  border: 1px solid var(--rule);
+  background: var(--surface);
+  color: var(--ink);
+  font-family: var(--font-ui);
+  font-weight: 600;
+}
+.pt-btn--next { background: var(--ok); color: var(--surface); border-color: var(--ok); }

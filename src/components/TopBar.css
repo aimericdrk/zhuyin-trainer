@@ -41,6 +41,49 @@
 .tb-stat--bad { color: var(--bad); }
 .tb-stat--neutral { color: var(--ink-soft); }
 
+.tb-annot {
+  display: inline-flex;
+  gap: 4px;
+  margin-right: 4px;
+  padding-right: 8px;
+  border-right: 1px solid var(--rule);
+}
+
+.tb-pill {
+  width: 30px;
+  height: 30px;
+  border-radius: var(--radius-key);
+  border: 1px solid var(--rule);
+  background: var(--surface);
+  color: var(--ink-soft);
+  font-family: var(--font-cn);
+  font-size: 15px;
+  line-height: 1;
+  transition: background 120ms ease, color 120ms ease, border-color 120ms ease;
+}
+.tb-pill:hover { border-color: var(--accent); }
+.tb-pill--on {
+  background: var(--accent);
+  color: var(--surface);
+  border-color: var(--accent);
+}
+
+.tb-pill--emoji {
+  font-family: var(--font-ui);
+  font-size: 14px;
+  margin-right: 4px;
+}
+
+/* Zhuyin-size cycle: ㄅ with a small superscript level (S/M/L/XL). */
+.tb-pill--size { position: relative; }
+.tb-pill-sz {
+  font-family: var(--font-ui);
+  font-size: 8px;
+  font-weight: 700;
+  margin-left: 1px;
+  vertical-align: super;
+}
+
 .tb-icon {
   padding: 6px 12px;
   border-radius: var(--radius-key);
@@ -59,4 +102,7 @@
   .tb-wrap { padding: 10px 12px; }
   .tb-title { font-size: 15px; }
   .tb-stats { font-size: 12px; gap: 6px; }
+  .tb-left, .tb-right { gap: 6px; }
+  .tb-pill { width: 26px; height: 26px; font-size: 13px; }
+  .tb-annot { margin-right: 2px; padding-right: 5px; }
 }

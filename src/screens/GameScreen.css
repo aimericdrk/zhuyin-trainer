@@ -1,0 +1,227 @@
+.gm-wrap {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg);
+}
+
+.gm-main {
+  flex: 1;
+  padding: 16px;
+  max-width: 760px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+/* ---- Prompt area ---- */
+.gm-prompt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 12px 4px;
+  text-align: center;
+}
+
+.gm-prompt-big {
+  font-family: var(--font-py);
+  font-variant-numeric: tabular-nums;
+  font-size: clamp(40px, 9vw, 64px);
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.gm-prompt-emoji {
+  font-size: clamp(48px, 11vw, 72px);
+  line-height: 1.1;
+}
+
+.gm-swatch {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  border: 1px solid var(--rule);
+  box-shadow: var(--shadow-card);
+}
+
+.gm-prompt-zh {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--font-cn);
+  font-size: clamp(44px, 10vw, 68px);
+  color: var(--ink);
+}
+
+.gm-prompt-py {
+  font-family: var(--font-py);
+  font-size: 16px;
+  font-style: italic;
+  color: var(--ink-soft);
+}
+
+.gm-prompt-gloss,
+.gm-prompt-q {
+  font-family: var(--font-ui);
+  font-size: clamp(15px, 3vw, 18px);
+  color: var(--ink-soft);
+  max-width: 420px;
+}
+
+.gm-prompt-q {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.gm-answer-audio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.gm-answer-zh {
+  font-family: var(--font-cn);
+  font-size: clamp(22px, 5vw, 30px);
+  color: var(--ok);
+}
+
+/* ---- Quiz option grid (mirrors MeaningOptions) ---- */
+.gm-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  padding: 4px;
+  width: 100%;
+}
+
+@media (min-width: 600px) {
+  .gm-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+.gm-chip {
+  min-height: 64px;
+  padding: 10px 14px;
+  border-radius: var(--radius-card);
+  background: var(--surface);
+  color: var(--ink);
+  border: 1px solid var(--rule);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  cursor: pointer;
+  transition: background 120ms ease, border-color 120ms ease, transform 80ms ease;
+}
+
+.gm-chip:hover:not(:disabled) {
+  background: var(--bg);
+  border-color: var(--accent);
+}
+
+.gm-chip:active:not(:disabled) { transform: translateY(1px); }
+.gm-chip:disabled { opacity: 0.45; cursor: not-allowed; }
+
+.gm-chip-zh {
+  font-family: var(--font-cn);
+  font-size: clamp(20px, 4.5vw, 26px);
+  line-height: 1.1;
+}
+
+.gm-chip-py {
+  font-family: var(--font-py);
+  font-size: 13px;
+  font-style: italic;
+  color: var(--ink-soft);
+}
+.gm-chip-zhuyin {
+  font-family: var(--font-cn);
+  font-style: normal;
+  font-size: calc(13px * var(--zhuyin-scale, 1));
+  color: var(--ink-soft);
+}
+.gm-prompt-zhuyin {
+  font-family: var(--font-cn);
+  font-style: normal;
+  font-size: calc(16px * var(--zhuyin-scale, 1));
+}
+
+.gm-chip--wrong {
+  background: color-mix(in srgb, var(--bad) 15%, var(--surface));
+  border-color: var(--bad);
+  color: var(--bad);
+  opacity: 1;
+}
+.gm-chip--wrong .gm-chip-py { color: var(--bad); }
+
+.gm-chip--correct {
+  background: color-mix(in srgb, var(--ok) 18%, var(--surface));
+  border-color: var(--ok);
+  color: var(--ok);
+  opacity: 1;
+}
+.gm-chip--correct .gm-chip-py { color: var(--ok); }
+
+/* ---- Actions (mirrors HardScreen buttons) ---- */
+.gm-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  padding: 4px 0 24px;
+  flex-wrap: wrap;
+}
+
+.gm-btn {
+  padding: 10px 18px;
+  min-height: 44px;
+  border-radius: var(--radius-key);
+  font-weight: 500;
+  font-family: var(--font-ui);
+  transition: background 120ms ease, color 120ms ease, transform 80ms ease;
+  cursor: pointer;
+}
+.gm-btn:active:not(:disabled) { transform: translateY(1px); }
+.gm-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.gm-btn--secondary {
+  background: var(--surface);
+  color: var(--ink);
+  border: 1px solid var(--rule);
+}
+.gm-btn--secondary:hover:not(:disabled) {
+  background: var(--bg);
+  border-color: var(--accent);
+}
+
+.gm-btn--accent {
+  background: var(--accent);
+  color: var(--surface);
+  border: 1px solid var(--accent);
+}
+.gm-btn--accent:hover:not(:disabled) {
+  background: color-mix(in srgb, var(--accent) 80%, var(--ink));
+}
+
+.gm-btn--continue {
+  padding: 12px 28px;
+  min-height: 48px;
+  background: var(--ok);
+  color: var(--surface);
+  border: 1px solid var(--ok);
+  font-weight: 600;
+  font-size: 16px;
+}
+.gm-btn--continue:hover:not(:disabled) {
+  background: color-mix(in srgb, var(--ok) 80%, var(--ink));
+}
+
+.gm-empty {
+  text-align: center;
+  color: var(--ink-soft);
+  font-family: var(--font-ui);
+}

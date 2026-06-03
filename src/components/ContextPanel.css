@@ -142,7 +142,7 @@
 
 .cp-word-zhuyin {
   font-family: var(--font-cn);
-  font-size: 16px;
+  font-size: calc(16px * var(--zhuyin-scale, 1));
   color: var(--ink-soft);
   margin-top: 2px;
 }

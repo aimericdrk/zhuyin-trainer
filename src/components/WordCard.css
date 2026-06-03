@@ -30,7 +30,7 @@
 
 .wc-zhuyin {
   font-family: var(--font-cn);
-  font-size: clamp(20px, 3vw, 30px);
+  font-size: calc(clamp(20px, 3vw, 30px) * var(--zhuyin-scale, 1));
   color: var(--ink-soft);
   letter-spacing: 0.05em;
 }

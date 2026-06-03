@@ -1,35 +1,50 @@
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { I18nProvider } from '../i18n/I18nContext';
+import { AnnotationProvider } from '../theme/AnnotationContext';
 import SentenceArranger from './SentenceArranger';
 
-const W = (i, char, en) => ({ id: `w-${i}`, char, en, fr: `fr-${en}` });
+const W = (i, char, en) => ({ id: `w-${i}`, char, en, fr: `fr-${en}`, pinyin: `PY${i}`, zhuyin: `ZH${i}` });
 
 function renderArr(props) {
   return render(
-    <I18nProvider>
-      <SentenceArranger
-        available={[W(0, '我', 'I'), W(1, '媽媽', 'mother'), W(2, '喜歡', 'like')]}
-        placed={[]}
-        status="arranging"
-        onPlace={() => {}}
-        onRemove={() => {}}
-        {...props}
-      />
-    </I18nProvider>
+    <AnnotationProvider>
+      <I18nProvider>
+        <SentenceArranger
+          available={[W(0, '我', 'I'), W(1, '媽媽', 'mother'), W(2, '喜歡', 'like')]}
+          placed={[]}
+          status="arranging"
+          onPlace={() => {}}
+          onRemove={() => {}}
+          {...props}
+        />
+      </I18nProvider>
+    </AnnotationProvider>
   );
 }
 
-test('renders the available cards with char and gloss', () => {
+beforeEach(() => { try { localStorage.clear(); } catch { /* ignore */ } });
+
+test('renders the available cards with characters, hiding the English by default', () => {
   const { container } = renderArr({});
   const available = container.querySelector('.sa-available');
   expect(available).toBeInTheDocument();
   const cards = available.querySelectorAll('.sa-card');
   expect(cards).toHaveLength(3);
   expect(available.textContent).toMatch(/我/);
-  expect(available.textContent).toMatch(/I/);
   expect(available.textContent).toMatch(/媽媽/);
+  // default annotation is pinyin-only — English meaning is NOT shown on tiles
+  expect(available.textContent).not.toMatch(/mother/);
+  expect(available.querySelector('.sa-card-anno--py')).toBeInTheDocument();
+  expect(available.querySelector('.sa-card-anno--mn')).toBeNull();
+});
+
+test('shows the meaning on tiles when the meaning annotation is enabled', () => {
+  try { localStorage.setItem('zhuyin.annot', JSON.stringify({ pinyin: false, zhuyin: false, meaning: true })); } catch { /* ignore */ }
+  const { container } = renderArr({});
+  const available = container.querySelector('.sa-available');
   expect(available.textContent).toMatch(/mother/);
+  expect(available.querySelector('.sa-card-anno--py')).toBeNull();
 });
 
 test('renders placed cards in the placed row', () => {

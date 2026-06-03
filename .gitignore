@@ -24,3 +24,8 @@ yarn-error.log*
 package-lock.json
 .firebase/
 docs/superpowers/
+
+.agents/
+.claude/
+.claude-flow/
+.swarm/

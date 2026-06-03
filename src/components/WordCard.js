@@ -1,4 +1,5 @@
 import { useI18n } from '../i18n/I18nContext';
+import { useAnnotation } from '../theme/AnnotationContext';
 import SpeakerButton from './SpeakerButton';
 import './WordCard.css';
 
@@ -13,6 +14,7 @@ export default function WordCard({
   audioSupported = false,
 }) {
   const { t } = useI18n();
+  const { annot } = useAnnotation();
   const canPlay = typeof speak === 'function' && audioSupported;
   return (
     <div className="wc-wrap">
@@ -28,8 +30,8 @@ export default function WordCard({
           />
         )}
       </div>
-      <div className="wc-pinyin">{pinyin}</div>
-      <div className="wc-zhuyin">{zhuyin}</div>
+      {annot.pinyin && <div className="wc-pinyin">{pinyin}</div>}
+      {annot.zhuyin && <div className="wc-zhuyin">{zhuyin}</div>}
     </div>
   );
 }

@@ -1,4 +1,5 @@
 import { useI18n } from '../i18n/I18nContext';
+import { useAnnotation } from '../theme/AnnotationContext';
 import SpeakerButton from './SpeakerButton';
 import './CharacterCard.css';
 
@@ -10,6 +11,7 @@ export default function CharacterCard({
   audioSupported = false,
 }) {
   const { t } = useI18n();
+  const { annot } = useAnnotation();
   const id = 'headline';
   const canPlay = typeof speak === 'function' && audioSupported;
   return (
@@ -26,7 +28,7 @@ export default function CharacterCard({
           />
         )}
       </div>
-      <div className="cc-pinyin">{pinyin}</div>
+      {annot.pinyin && <div className="cc-pinyin">{pinyin}</div>}
     </div>
   );
 }
