@@ -22,16 +22,25 @@ function renderBar() {
 
 beforeEach(() => { try { localStorage.clear(); } catch { /* ignore */ } });
 
-test('renders three reading-aid pills, a zhuyin-size pill and an auto-play toggle', () => {
+test('renders three reading-aid pills, three size pills and an auto-play toggle', () => {
   const { container } = renderBar();
-  // 3 annotation pills + 1 zhuyin-size pill + 1 emoji (autoplay) pill
-  expect(container.querySelectorAll('.tb-pill').length).toBe(5);
+  // 3 annotation pills + 3 size pills (zhuyin/pinyin/char) + 1 emoji (autoplay) pill
+  expect(container.querySelectorAll('.tb-pill').length).toBe(7);
 });
 
-test('the zhuyin-size pill cycles the level on click', async () => {
+test('a size pill exists for zhuyin, pinyin and characters', () => {
   const { getByLabelText } = renderBar();
-  const sizeBtn = getByLabelText('Zhuyin size');
-  expect(sizeBtn).toBeInTheDocument();
+  expect(getByLabelText('Zhuyin size')).toBeInTheDocument();
+  expect(getByLabelText('Pinyin size')).toBeInTheDocument();
+  expect(getByLabelText('Character size')).toBeInTheDocument();
+});
+
+test('the character-size pill scales --char-scale on the root on click', async () => {
+  const { getByLabelText } = renderBar();
+  expect(document.documentElement.style.getPropertyValue('--char-scale')).toBe('1');
+  await userEvent.click(getByLabelText('Character size'));
+  // S (1) → M (1.3)
+  expect(document.documentElement.style.getPropertyValue('--char-scale')).toBe('1.3');
 });
 
 test('annotation pills reflect the default (pinyin + zhuyin on, meaning off)', () => {

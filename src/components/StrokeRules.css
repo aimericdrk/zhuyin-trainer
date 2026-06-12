@@ -50,7 +50,7 @@
 
 .sr-char {
   font-family: var(--font-cn);
-  font-size: 18px;
+  font-size: calc((18px) * var(--char-scale, 1));
   color: var(--ink-soft);
 }
 

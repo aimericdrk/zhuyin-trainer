@@ -66,7 +66,7 @@
 }
 .wr-char {
   font-family: var(--font-cn);
-  font-size: 30px;
+  font-size: calc((30px) * var(--char-scale, 1));
   color: var(--ink);
 }
 
@@ -79,7 +79,7 @@
 .wr-py {
   font-family: var(--font-py);
   font-style: italic;
-  font-size: 22px;
+  font-size: calc((22px) * var(--pinyin-scale, 1));
   color: var(--accent);
 }
 .wr-en {

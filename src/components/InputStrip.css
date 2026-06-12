@@ -15,7 +15,7 @@
   color: var(--ink);
   border: 2px solid var(--rule);
   font-family: var(--font-cn);
-  font-size: clamp(28px, 4.5vw, 40px);
+  font-size: calc((clamp(28px, 4.5vw, 40px)) * var(--char-scale, 1));
   display: flex;
   align-items: center;
   justify-content: center;

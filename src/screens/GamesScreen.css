@@ -67,7 +67,7 @@
 
 .gs-card-zh {
   font-family: var(--font-cn);
-  font-size: 28px;
+  font-size: calc((28px) * var(--char-scale, 1));
   color: var(--ink);
 }
 

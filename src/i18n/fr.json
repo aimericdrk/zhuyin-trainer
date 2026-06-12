@@ -218,6 +218,8 @@
     "zhuyin": "Afficher le zhuyin",
     "meaning": "Afficher le sens",
     "autoplay": "Lecture audio auto",
-    "zhuyinSize": "Taille du zhuyin"
+    "zhuyinSize": "Taille du zhuyin",
+    "pinyinSize": "Taille du pinyin",
+    "charSize": "Taille des caractères"
   }
 }

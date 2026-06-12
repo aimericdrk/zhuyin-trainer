@@ -12,7 +12,12 @@ const ANNOT_PILLS = [
 
 export default function TopBar({ title, onBack, stats }) {
   const { theme, toggleTheme } = useTheme();
-  const { annot, toggle, cycleZhuyinScale, zhuyinScaleLabel } = useAnnotation();
+  const {
+    annot, toggle,
+    cycleZhuyinScale, zhuyinScaleLabel,
+    cyclePinyinScale, pinyinScaleLabel,
+    cycleCharScale, charScaleLabel,
+  } = useAnnotation();
   const { autoPlay, toggleAutoPlay } = useAutoPlay();
   const { lang, toggleLang, t } = useI18n();
 
@@ -54,6 +59,22 @@ export default function TopBar({ title, onBack, stats }) {
             title={`${t('topbar.zhuyinSize')} · ${zhuyinScaleLabel}`}
           >
             ㄅ<sup className="tb-pill-sz">{zhuyinScaleLabel}</sup>
+          </button>
+          <button
+            className="tb-pill tb-pill--size"
+            onClick={cyclePinyinScale}
+            aria-label={t('topbar.pinyinSize')}
+            title={`${t('topbar.pinyinSize')} · ${pinyinScaleLabel}`}
+          >
+            拼<sup className="tb-pill-sz">{pinyinScaleLabel}</sup>
+          </button>
+          <button
+            className="tb-pill tb-pill--size"
+            onClick={cycleCharScale}
+            aria-label={t('topbar.charSize')}
+            title={`${t('topbar.charSize')} · ${charScaleLabel}`}
+          >
+            字<sup className="tb-pill-sz">{charScaleLabel}</sup>
           </button>
         </span>
         <button

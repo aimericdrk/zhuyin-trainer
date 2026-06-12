@@ -87,7 +87,7 @@
 
 .sa-card-char {
   font-family: var(--font-cn);
-  font-size: clamp(20px, 4vw, 28px);
+  font-size: calc((clamp(20px, 4vw, 28px)) * var(--char-scale, 1));
   line-height: 1;
 }
 
@@ -98,7 +98,7 @@
   line-height: 1.2;
 }
 .sa-card-anno--zh { font-family: var(--font-cn); font-size: calc(12px * var(--zhuyin-scale, 1)); }
-.sa-card-anno--py { font-family: var(--font-py); font-style: italic; color: var(--accent); }
+.sa-card-anno--py { font-family: var(--font-py); font-style: italic; font-size: calc(12px * var(--pinyin-scale, 1)); color: var(--accent); }
 .sa-card-anno--mn { font-family: var(--font-ui); }
 
 .sa-card--dragging {

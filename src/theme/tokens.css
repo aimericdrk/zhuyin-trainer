@@ -18,9 +18,12 @@
   --font-py:    'Source Serif 4', 'Source Serif Pro', Georgia, serif;
   --font-ui:    'Inter', system-ui, -apple-system, sans-serif;
 
-  /* Global multiplier for the size of zhuyin (bopomofo) annotations.
-     Overridden at runtime on <html> by AnnotationContext; default = M (1.3). */
+  /* Global multipliers for reading-aid / glyph sizes. Overridden at runtime on
+     <html> by AnnotationContext. Zhuyin defaults to M (1.3); pinyin and Chinese
+     characters default to 1 (unchanged) so the app looks the same until adjusted. */
   --zhuyin-scale: 1.3;
+  --pinyin-scale: 1;
+  --char-scale: 1;
 }
 
 [data-theme="dark"] {

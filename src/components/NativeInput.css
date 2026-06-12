@@ -14,7 +14,7 @@
   background: var(--surface);
   color: var(--ink);
   font-family: var(--font-cn);
-  font-size: clamp(20px, 4vw, 28px);
+  font-size: calc((clamp(20px, 4vw, 28px)) * var(--char-scale, 1));
   text-align: center;
   transition: border-color 120ms ease, box-shadow 120ms ease;
 }

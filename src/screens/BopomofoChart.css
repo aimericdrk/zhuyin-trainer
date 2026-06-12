@@ -34,7 +34,7 @@
 
 .bp-section-zh {
   font-family: var(--font-cn);
-  font-size: 22px;
+  font-size: calc((22px) * var(--char-scale, 1));
   color: var(--ink);
 }
 
@@ -83,7 +83,7 @@
 
 .bp-py {
   font-family: var(--font-py);
-  font-size: 15px;
+  font-size: calc((15px) * var(--pinyin-scale, 1));
   font-style: italic;
   color: var(--accent);
 }

@@ -129,13 +129,13 @@
 
 .cp-word-char {
   font-family: var(--font-cn);
-  font-size: 24px;
+  font-size: calc((24px) * var(--char-scale, 1));
   color: var(--ink);
 }
 
 .cp-word-pinyin {
   font-family: var(--font-py);
-  font-size: 16px;
+  font-size: calc((16px) * var(--pinyin-scale, 1));
   color: var(--ink-soft);
   margin-top: 2px;
 }

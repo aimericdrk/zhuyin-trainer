@@ -14,7 +14,7 @@
 
 .wc-character {
   font-family: var(--font-cn);
-  font-size: clamp(72px, 14vw, 140px);
+  font-size: calc((clamp(72px, 14vw, 140px)) * var(--char-scale, 1));
   line-height: 1;
   color: var(--ink);
   text-align: center;
@@ -23,7 +23,7 @@
 
 .wc-pinyin {
   font-family: var(--font-py);
-  font-size: clamp(22px, 3.5vw, 36px);
+  font-size: calc((clamp(22px, 3.5vw, 36px)) * var(--pinyin-scale, 1));
   color: var(--ink-soft);
   letter-spacing: 0.05em;
 }
